@@ -22,5 +22,10 @@ def summary_statistics(x):
     window = sg.Window('Summary Statistics', layout)
     event, values = window.read()
 
+def graph_metrics(x):
+    x = x[['Timestamp (Elapsed time in seconds)', 'FPS', '99(%) FPS', 'Render Latency(MSec)', 'CPU Utilization(%)', 'GPU1 Utilization(%)', 'GPU1 Temperature(Degrees celsius)','GPU1 Frequency(MHz)', 'GPU1 Fan1 Speed (RPM)']]
+    x.plot.line(x = 'Timestamp (Elapsed time in seconds)', subplots = True)
+    plot.show(block = False)
+
 def frame_stutter(x):
     print(x)

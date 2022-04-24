@@ -24,6 +24,7 @@ def diff_list(fps_window):
     else:
         return(True)
 
+# return window indices at which stutters occur
 def frame_stutter(seq, window_size, column):
 
     seq_list = seq[column].values.tolist()
@@ -39,21 +40,21 @@ def frame_stutter(seq, window_size, column):
     
     return(indices)
 
+# slide thru other metrics to determine values at stutter loci
 def frame_stutter_cause(seq, window_size, column):
 
     seq_list = seq[column].values.tolist()
     windows = []
-    indices = []
-    loci = []
+    index_and_values = []
 
     for i in range(len(seq_list) - window_size + 1):
         windows.append(seq_list[i: i + window_size])
 
     for i in range(1, len(windows)):
-        print(1)
+        index_and_values.append(windows[i])
     
-    for i in range(1, len(mydf, 5)[2]):
-       print(1)
+    return(index_and_values)
 
-#print(frame_stutter(mydf, 5, 'FPS')[2])
+print(frame_stutter(mydf, 5, 'FPS'))
+print(frame_stutter_cause(mydf, 5, 'GPU1 Utilization(%)'))
 #print(diff_list([60.0, 59.0, 59.0, 57.0, 59.0]))

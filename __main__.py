@@ -7,7 +7,6 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 from analysis import *
-from graphs import *
 
 # Show CSV data in Table
 sg.theme('Reddit')
