@@ -1,0 +1,13 @@
+# Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+# .\.venv\Scripts\activate
+# deactivate
+
+def find_stuttter():
+    slide window thru 99FPS find windows BELOW avg. # rapid drops, so small windows, maybe 3 wide
+    use same slide to confirm with actual FPS that window is BEOW avg. confirming these two confirms STUTTER
+
+def stutter_cause():
+    if location of stutter = location of above avg gpu temp followed by GPU drop, cause = THROTTLE
+    if stutter = 99+ GPU usage, cause = GPU bottleneck
+    if suttter = 99+ CPU usage, cause = CPU bottleneck
+    if stutter = LOW GPU Freq, cause = downclocking
